@@ -1,0 +1,5 @@
+x=int(input())
+w=1
+for z in range(1,x+1):
+    w*=z
+print (w)
