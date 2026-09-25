@@ -1,0 +1,9 @@
+print("Bill Split Calculator")
+bill=float(input())
+tip_percentage=float(input())
+people_splitting=int(input())
+tip_amount = (tip_percentage / 100) * bill
+total= tip_amount+bill
+print(f"Total (including tip): ${total}")
+amount_per_person=total/people_splitting
+print(f"Each person pays: ${amount_per_person}")
