@@ -1,0 +1,76 @@
+def display_menu():
+    print("Contact Book Menu:")
+    print("1. Add Contact")
+    print("2. View Contact")
+    print("3. Edit Contact")
+    print("4. Delete Contact")
+    print("5. List All Contacts")
+    print("6. Exit")
+
+def add_contact(contact_book):
+    Name =input()
+    if Name in contact_book:
+        print("Contact already exists!")
+    else:
+        contact_book[Name]={} 
+        contact_book[Name]["Phone"]=input()
+        contact_book[Name]["Email"]=input()
+        contact_book[Name]["Address"]=input()
+        print("Contact added successfully!")
+
+def view_contact(contact_book):
+    Name= input()
+    if Name in contact_book:
+        print(f"Name: {Name}")
+        for key,value in contact_book[Name].items():
+            print(f"{key.capitalize()}: {value}")
+    else:
+        print("Contact not found!")
+
+def edit_contact(contact_book):
+    Name=input()
+    if Name in contact_book:
+        contact_book[Name]={} 
+        contact_book[Name]["Phone"]=input()
+        contact_book[Name]["Email"]=input()
+        contact_book[Name]["Address"]=input()
+        print("Contact updated successfully!")
+    else:
+        print("Contact not found!")
+
+def delete_contact(contact_book):
+    Name=input()
+    if Name in contact_book:
+        del contact_book[Name]
+        print("Contact deleted successfully!")
+    else:
+        print("Contact not found!")
+
+def list_all_contacts(contact_book):
+    if not contact_book:
+        print("No contacts available.")
+    else:
+        for Key,values in contact_book.items():
+            print (f"Name: {Key}")
+            for key,value in values.items():
+                print(f"{key.capitalize()}: {value}")
+            print("")
+contact_book={}      
+while True:
+    display_menu()
+    Menu_choice=int(input())
+
+    if Menu_choice==1:
+        add_contact(contact_book)
+    elif Menu_choice==2:
+        view_contact(contact_book)
+    elif Menu_choice==3:
+        edit_contact(contact_book)
+    elif Menu_choice==4:
+        delete_contact(contact_book)
+    elif Menu_choice==5:
+        list_all_contacts(contact_book)
+    elif Menu_choice==6:
+        break
+    else:
+        print("Invalid choice. Please try again.")
