@@ -25,13 +25,13 @@ A collection of small beginner-friendly Python programs I built to practice core
 - Printing patterns with nested loops
 
 ## Future Improvements
-1. Save contacts and expenses to a file 
+1. Save contacts and expenses to a file:
 Right now, my Contact Book and Expense Tracker forgets everything when the program closes but saving its data to a file would keep the data for next time.
 
-2. Add input validation and error handling
+2. Add input validation and error handling: 
 If someone types a letter when the program expects a number, it would crash. This improvement would show a friendly message like "Please enter a number" instead.
 
-3. Build GUI versions using Tkinter
+3. Build GUI versions using Tkinter:
 Right now my programs run in a black text window. A GUI means buttons and boxes, like a real app
 
 ## Author
